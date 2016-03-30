@@ -14,7 +14,7 @@ a { color: #505050; }
 
 /* Main */
 .main {
-  padding: 55px 60px;
+  padding: 30px 60px;
   max-width: 600px;
 }
 
@@ -34,7 +34,7 @@ a { color: #505050; }
 }
 
 .header__subtitle {
-  margin: 5px 0 0;
+  margin: -10px 0 0;
 
   color: #9B9B9B;
   font-weight: 400;
@@ -75,11 +75,18 @@ a { color: #505050; }
   margin-bottom: 50px;
 }
 
+.posts__label {
+  margin: 0 0 10px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 .posts__post {
   position: relative;
 
   display: block;
-  padding: 25px 0;
+  padding: 20px 0;
 
   font-size: 1.875rem;
   font-weight: 100;

@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Cezar Luiz - Javascript e outras coisas</title>
+  <title>Hello, World! - Javascript e outras coisas</title>
   <meta name="description" content="Um blog pessoal sobre tecnologia, desenvolvimento web e qualquer outra coisa">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -40,15 +40,34 @@
   </nav>
 </header>
 
-<section class="posts">
-  
-    <a href="http://cezarluiz0.github.io/2016/03/30/Hello-World/" class="posts__post">Hello, World!</a>
-  
-</section>
+<article class="post">
+  <h2 class="post__title">Hello, World!</h2>
 
-<div class="paginator">
-  <span class="page-number current">1</span>
-</div>
+  <section class="post__content">
+    <p>Oi pessoal, tudo bem?</p>
+<p>Para quem não me conhece, sou o Cezar, programador JavaScript e metido a designer.</p>
+<p>Voltei a escrever e por meio deste blog vou postar artigos mais variados possível, javascript, html, culinária, humor, dia-a-dia, essas coisas.</p>
+<p>Espero que vocês curtam! :)</p>
+
+  </section>
+</article>
+
+
+  <section class="comments">
+    <div id="disqus_thread"></div>
+    <script>
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+
+    s.src = '//cezarluiz.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </section>
+
   </main>
 </body>
 </html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript to the rescue! #Promises - Javascript e outras coisas</title>
+  <meta name="description" content="Um blog pessoal sobre tecnologia, desenvolvimento web e qualquer outra coisa">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="main">
+    <header class="header">
+  <h1 class="header__logo">
+    <a href="http://cezarlz.github.io" class="header__logo-link">Cezar Luiz</a>
+  </h1>
+
+  <h3 class="header__subtitle">Javascript e outras coisas</h3>
+
+  <nav class="header__links">
+    
+      
+        <a href="https://github.com/cezarlz" title="Github" class="header__link btn--small" target="_blank" rel="external">Github</a>
+      
+    
+      
+        <a href="https://br.linkedin.com/in/cezarluiz" title="Linkedin" class="header__link btn--small" target="_blank" rel="external">Linkedin</a>
+      
+    
+      
+        <a href="mailto:cezarluiz.c@gmail.com" title="Gmail" external="true" class="header__link btn--small">Gmail</a>
+      
+    
+      
+        <a href="https://twitter.com/cezarlz" title="Twitter" class="header__link btn--small" target="_blank" rel="external">Twitter</a>
+      
+    
+  </nav>
+</header>
+
+<article class="post">
+  <h2 class="post__title">JavaScript to the rescue! #Promises</h2>
+
+  <section class="post__content">
+    <p>E ai folks, tudo certinho? <a href="LINK_PARA_JQUERY_VS_JS">Gostaram do último post</a>? Espero que tenha sido útil :)</p><p>Como prometido, vamos para a nossa segunda parte dessa série: Promises.</p><ul><li><a href="LINK_PARA_JQUERY_VS_JS">jQuery vs JS</a></li><li><strong>Promises</strong></li><li>Ajax</li><li>Escopo</li><li>Patterns</li><li>ES6</li></ul><hr><p>Promises são, promessas! Ah vá!</p><p>Mas é verdade, tem todo um conceito por trás das coisas e não ia deixar de ser diferente no mundo da programação.</p><p>O que as Promises mais solucionam ao meu ver, são os problemas que temos com callbacks em chamadas assíncronas. Já ouviu falar em <em>callback hell</em>?</p><p><img src="http://icompile.eladkarako.com/wp-content/uploads/2016/01/icompile.eladkarako.com_callback_hell.gif" alt="callback hell"></p><p>Pois bem, usamos callback em tudo hoje, quando uma animação termina, quando uma chamada ajax termina, dá erro, dá sucesso ou o próprio progresso dela. E para não acontecer essas coisas e deixar nosso código mais limpo e elegante, as Promises chegam com tudo!</p><p>Exemplos! Me dê exemplos!</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Exemplo simples em JS puro usando Promises</span></span><br><span class="line"><span class="keyword">var</span> jax = <span class="function"><span class="keyword">function</span>(<span class="params">opts</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest;</span><br><span class="line"></span><br><span class="line">    xhr.open(opts.method, opts.url, opts.async || <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Eventos</span></span><br><span class="line">    xhr.addEventListener(<span class="string">'load'</span>, resolve);</span><br><span class="line">    xhr.addEventListener(<span class="string">'error'</span>, reject);</span><br><span class="line">    xhr.addEventListener(<span class="string">'abort'</span>, reject);</span><br><span class="line"></span><br><span class="line">    xhr.send();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>Quando instanciamos um objeto <code>Promise</code>, ele nos oferece dois parâmetros, <code>resolve</code> e <code>reject</code>.</p>
+  </section>
+</article>
+
+
+  <section class="comments">
+    <div id="disqus_thread"></div>
+    <script>
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+
+    s.src = '//cezarluiz.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </section>
+
+  </main>
+
+  <script src=""></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+<script src="/js/main.js"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-50031701-3', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</body>
+</html>
